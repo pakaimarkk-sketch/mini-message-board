@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Üzenet · Üzenőfal</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Üzenőfal kezdőlap"><span class="brand-mark">✳</span> Üzenőfal</a>
+        <a class="button button-small" href="/new">+ Új üzenet</a>
+      </header>
+
+      <main class="narrow-main">
+        <a class="back-link" href="/">← Vissza az üzenetekhez</a>
+        <div class="page-heading">
+          <p class="eyebrow">Üzenet részletei</p>
+          <h1>Egy üzenet az üzenőfalról.</h1>
+        </div>
+        <article class="detail-card">
+          <div class="message-meta">
+            <span class="avatar avatar-large" aria-hidden="true"><%= message.user.charAt(0).toUpperCase() %></span>
+            <div>
+              <strong class="author"><%= message.user %></strong>
+              <time class="date"><%= message.added.toLocaleString("hu-HU") %></time>
+            </div>
+          </div>
+          <p class="detail-text"><%= message.text %></p>
+        </article>
+        <a class="text-link detail-back" href="/">← Összes üzenet</a>
+      </main>
+      <footer class="site-footer">Mini Message Board</footer>
+    </div>
+  </body>
+</html>
